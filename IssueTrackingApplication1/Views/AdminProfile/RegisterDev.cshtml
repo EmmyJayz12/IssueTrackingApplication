@@ -1,0 +1,107 @@
+﻿
+@{
+    ViewBag.Title = "RegisterDev";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="page-wrapper">
+    <div class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <h4 class="page-title">Register staffs</h4>
+            </div>
+        </div>
+        <div>
+            @if(ViewBag.Message != null)
+            {
+                <div class="alet alert-info">@ViewBag.Message</div>
+            }
+            <form action="" method="post">
+                <div class="card-box">
+                    <h3 class="card-title">Contact Informations</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+
+                                <input type="text" name="FirstName" placeholder="Enter First Name" class="form-control floating" value="" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+
+                                <input type="text" name="LastName" placeholder="Enter last Name" class="form-control floating" value="" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+
+                                <select class="select form-control floating" name="Gender">
+                                    <option value="">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+
+                                <input type="text" name="Address" placeholder="Address" class="form-control floating" value="" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+
+                                <input type="text" name="State" placeholder="State" class="form-control floating" value="" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+
+                                <input type="text" name="Country" placeholder="Enter country" class="form-control floating" value="" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+
+                                <input type="text" name="Phone" placeholder="Enter Phone" class="form-control floating" value="" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+
+                                <input type="text" name="EmployeeId" placeholder="Enter EmployeeId" class="form-control floating" value="" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+
+                                <input type="text" name="Email" placeholder="Enter Email" class="form-control floating" value="" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+
+                                <input type="text" name="Username" placeholder="Enter Username" class="form-control floating" value="" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group ">
+
+                                <input type="password" name="Password" placeholder="Enter Password" class="form-control floating" value="" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+
+                                <input type="password" name="ConfirmPassword" placeholder="Confirm Password" class="form-control floating" value="" required>
+                            </div>
+                        </div>
+                        <div class="m-t-20 text-center">
+                            <button class="btn btn-primary submit-btn" type="submit">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
