@@ -12,6 +12,6 @@ namespace IssueTrackingApplication1.Models
         public DbSet<AdminRegistration> AdminDetails { get; set; }
         public DbSet<TeamHead> RegisterTeamHeads { get; set; }
         public DbSet<RegisterDev> RegisterDevelopers { get; set; }
-        public DbSet<Users> AllUsers { get; set; }
+        public DbSet<Users> RegisterUsers { get; set; }
     }
 }

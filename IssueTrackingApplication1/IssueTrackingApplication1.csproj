@@ -207,19 +207,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202009010822272_InitialCreate.cs" />
-    <Compile Include="Migrations\202009010822272_InitialCreate.designer.cs">
-      <DependentUpon>202009010822272_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202009010934596_Migration-Add-RegisterTeamHeads.cs" />
-    <Compile Include="Migrations\202009010934596_Migration-Add-RegisterTeamHeads.designer.cs">
-      <DependentUpon>202009010934596_Migration-Add-RegisterTeamHeads.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202009011051345_Migration-Add-RegisterDevelopers.cs" />
-    <Compile Include="Migrations\202009011051345_Migration-Add-RegisterDevelopers.designer.cs">
-      <DependentUpon>202009011051345_Migration-Add-RegisterDevelopers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdminRegistration.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -247,7 +234,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\DataBase\IssueTrackerDb.bak" />
+    <Content Include="Content\DataBase\IssueTrackersDb.bak" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -323,6 +310,7 @@
     <Content Include="Views\AdminProfile\RegisterUsers.cshtml" />
     <Content Include="Views\AdminProfile\RegisterDev.cshtml" />
     <Content Include="Views\Shared\AdminHeader.cshtml" />
+    <Content Include="Views\Users\AdminLogin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -338,17 +326,6 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202009010822272_InitialCreate.resx">
-      <DependentUpon>202009010822272_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202009010934596_Migration-Add-RegisterTeamHeads.resx">
-      <DependentUpon>202009010934596_Migration-Add-RegisterTeamHeads.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202009011051345_Migration-Add-RegisterDevelopers.resx">
-      <DependentUpon>202009011051345_Migration-Add-RegisterDevelopers.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

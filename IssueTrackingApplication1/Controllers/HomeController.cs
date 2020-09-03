@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IssueTrackingApplication1.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -14,16 +15,26 @@ namespace IssueTrackingApplication1.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index()
+        public ActionResult Index(string username, string password)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                using (IssueDbContext db = new IssueDbContext()) 
+                {
+                    var result = db.RegisterUsers.SingleOrDefault(u => u.Username == username && u.Password == password);
+                    if(result == null)
+                    {
+                        ViewBag.Message = "Invalid username or Password";
+                        return View();
+                    }
+                }
+            }
+            return RedirectToAction("Index", "Users");
         }
 
         public ActionResult RegisterNow()
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+           return View();
         }
 
         public ActionResult ForgetPassword()

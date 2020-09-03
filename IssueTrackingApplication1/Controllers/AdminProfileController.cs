@@ -119,7 +119,7 @@ namespace IssueTrackingApplication1.Controllers
                         var result = db.RegisterTeamHeads.SingleOrDefault((u => u.Email == user.Email && u.Password == user.Password));
                         if (result == null)
                         {
-                            db.AllUsers.Add(user);
+                            db.RegisterUsers.Add(user);
                             db.SaveChanges();
                         }
                         ViewBag.Message = "record already exist";
