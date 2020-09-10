@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "ViewIssue";
+    Layout = "~/Views/Shared/_devLayout.cshtml";
+}
+
+@Html.Partial("_DevSideBar")
+<div class="page-wrapper">
+    <div class="content">
+        <div class="row">
+            <div class="col-sm-4 col-3">
+                <h1 class="page-title">View All Issues</h1>
+            </div>
+            <div class="col-sm-8 col-9 text-right m-b-20">
+                <a href="/Users/CreateTicket" class="btn btn btn-primary btn-rounded float-right"><i class="fa fa-plus"></i> Create Ticket</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table table-striped custom-table">
+                        <thead>
+                            <tr>
+                                <th>Issue ID</th>
+                                <th>Description</th>
+                                <th>Opened By</th>
+                                <th>Opened Date</th>
+                                <th>Priority</th>
+                                <th>Status</th>
+                                <th>Assign To</th>
+                                <th>Closed By</th>
+                                <th>Closed Date</th>
+                                <th> </th>
+                            </tr>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.TicketId</td>
+                                    <td>@item.Description</td>
+                                    <td>@item.Email</td>
+                                    <td>@item.DataRegistered</td>
+                                    <td>@item.Priority</td>
+                                    <td>@item.Status</td>
+                                    <td>@item.AssignTo</td>
+                                    <td>@item.ClosedBy</td>
+                                    <td>@item.ClosedDate</td>
+                                    <td><a href="/DevUsers/Update/@item.UserId" class="btn btn-primary" style="color:white">UPDATE</a></td>
+                                </tr>
+                            }
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+
+
+
+
+

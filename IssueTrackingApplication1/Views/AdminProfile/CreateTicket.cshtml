@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "CreateTicket";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+@Html.Partial("AdminSideBar")
+<div class="page-wrapper">
+    <div class="content">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <h4 class="page-title">Assign Ticket</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <form>
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <select class="form-control select">
+                                    <option>Issue Type</option>
+                                    <option value="">Network Chalenge</option>
+                                    <option value="">System Failure</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <select class="form-control select">
+                                    <option>Priority</option>
+                                    <option value="">High</option>
+                                    <option value="">Medium</option>
+                                    <option value="">Low</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Evidence</label>
+                                <div class="profile-upload">
+                                    <div class="upload-input">
+                                        <input type="file" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-6 col-md-12 col-lg-12">
+                            <label>Issue Description</label>
+                            <textarea class="form-control" rows="3" cols="30"></textarea>
+                        </div>
+                        <div class="m-t-20 text-center col-sm-12">
+                            <button class="btn btn-primary submit-btn">Create</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

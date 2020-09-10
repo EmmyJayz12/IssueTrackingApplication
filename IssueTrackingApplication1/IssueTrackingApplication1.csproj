@@ -208,20 +208,27 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AdminInfo.cs" />
+    <Compile Include="Models\AdminLoginInfo.cs" />
     <Compile Include="Models\AdminRegistration.cs" />
+    <Compile Include="Models\DevInfo.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\IssueDbContext.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\RegisterDev.cs" />
     <Compile Include="Models\SqlDefaultValueAttribute.cs" />
     <Compile Include="Models\TeamHead.cs" />
-    <Compile Include="Models\Users.cs" />
+    <Compile Include="Models\IssueInfo.cs" />
+    <Compile Include="Models\UsersInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Utility\Utils.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\img\bg-image08.jpg" />
+    <Content Include="Content\img\bg-image09.jpg" />
     <Content Include="Content\img\trackingicon.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -311,12 +318,34 @@
     <Content Include="Views\AdminProfile\RegisterDev.cshtml" />
     <Content Include="Views\Shared\AdminHeader.cshtml" />
     <Content Include="Views\Users\AdminLogin.cshtml" />
+    <Content Include="Views\Users\ViewIssue.cshtml" />
+    <Content Include="Views\Users\CreateTicket.cshtml" />
+    <Content Include="Views\Users\ManageAccount.cshtml" />
+    <Content Include="Views\AdminProfile\ViewIssue.cshtml" />
+    <Content Include="Views\AdminProfile\CreateTicket.cshtml" />
+    <Content Include="Views\AdminProfile\ManageAccount.cshtml" />
+    <Content Include="Views\AdminProfile\Inbox.cshtml" />
+    <Content Include="Views\Shared\_AdminLoginLayout.cshtml" />
+    <Content Include="Views\Shared\_UsersLoginLayout.cshtml" />
+    <Content Include="Views\Users\Inbox.cshtml" />
+    <Content Include="Views\AdminProfile\EdithTicket.cshtml" />
+    <Content Include="Views\AdminProfile\Update.cshtml" />
+    <Content Include="Views\AdminProfile\EditTicket.cshtml" />
+    <Content Include="Views\DevUsers\Inbox.cshtml" />
+    <Content Include="Views\Shared\_devLayout.cshtml" />
+    <Content Include="Views\DevUsers\ViewIssue.cshtml" />
+    <Content Include="Views\DevUsers\EditTicket.cshtml" />
+    <Content Include="Views\DevUsers\Update.cshtml" />
+    <Content Include="Views\DevUsers\ManageAccount.cshtml" />
+    <Content Include="Views\Shared\_DevSideBar.cshtml" />
+    <Content Include="Views\Shared\_DevHeader.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\css\" />
     <Folder Include="Content\fonts\" />
     <Folder Include="Content\js\" />
+    <Folder Include="Content\photos\" />
     <Folder Include="Content\plugins\" />
   </ItemGroup>
   <ItemGroup>

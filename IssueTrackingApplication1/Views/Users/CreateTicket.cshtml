@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "CreateTicket";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+ 
+@Html.Partial("SideBar2")
+<div class="page-wrapper">
+    <div class="content">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2" style="background-color:white; padding-top:30px;">
+                <h4 class="page-title">Assign Ticket</h4>
+            </div>
+            @if(ViewBag.Message != null)
+            {
+                <div class="alert alert-success">@ViewBag.Message</div>
+            }
+        </div>
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2" style="background-color:white; padding-bottom:30px;">
+                <form action="" method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <select class="form-control select" name="IssueType">
+                                    <option value="">Issue Type</option>
+                                    <option value="Network Challenge">Network Challenge</option>
+                                    <option value="System Failure">System Failure</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <select class="form-control select" name="Priority">
+                                    <option value="">Priority</option>
+                                    <option value="High">High</option>
+                                    <option value="Medium">Medium</option>
+                                    <option value="Low">Low</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Evidence</label>
+                                <div class="profile-upload">
+                                    <div class="upload-input">
+                                        <input type="file" value="" name="img" class="form-control" accept="image/*">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-6 col-md-12 col-lg-12">
+                            <label>Issue Description</label>
+                            <textarea class="form-control" name="description" rows="3" cols="30"></textarea>
+                        </div>
+                    <div class="m-t-20 text-center col-sm-12">
+                        <button type="submit" class="btn btn-primary submit-btn">Create</button>
+                    </div>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>

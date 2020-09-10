@@ -1,10 +1,10 @@
 ﻿@using IssueTrackingApplication1.Models
 <div class="header" style="background-color:rgba(26,63,124); color: white">
-    @{ 
-        var Admin = Session["admin"] as AdminInfo;
+    @{
+        var Dev = Session["devInfo"] as DevInfo;
     }
-    <div class="header-left">    
-            <img src="~/Content/img/trackingicon.jpg" width="35" height="35" alt="" style="margin-top: 6px;"> <span>ISSUE TRACKING</span>
+    <div class="header-left">
+        <img src="~/Content/img/trackingicon.jpg" width="35" height="35" alt="" style="margin-top: 6px;"> <span>ISSUE TRACKING</span>
     </div>
     <ul class="nav user-menu float-right">
         <li class="nav-item dropdown has-arrow">
@@ -13,13 +13,14 @@
                     <img class="rounded-circle" src="~/Content/img/user.jpg" width="24" alt="Admin">
                     <span class="status online"></span>
                 </span>
+               
                 @{
-                    if (Admin != null)
+                    if (Dev != null)
                     {
-                        <span>@Admin.FirstName</span>
+                        <span>@Dev.FirstName</span>
                     }
                 }
-                
+
             </a>
         </li>
     </ul>

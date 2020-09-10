@@ -18,15 +18,18 @@
         <script src="assets/js/html5shiv.min.js"></script>
         <script src="assets/js/respond.min.js"></script>
     <![endif]-->
-
-   
+    <style>
+        .page-title {
+            color: white;
+        }
+    </style>
 </head>
 <body style="background-color:rgba(26,63,124,0.5);">
     <div class="main-wrapper">
-        
-        @Html.Partial("Header");
 
-        @Html.Partial("SideBar")
+        @Html.Partial("_DevHeader")
+
+        @Html.Partial("_DevSideBar")
 
         @RenderBody()
 

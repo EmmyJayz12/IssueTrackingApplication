@@ -4,42 +4,31 @@
     Layout = "~/Views/Shared/_MyLayout2.cshtml";
 }
 
-@Html.Partial("SideBar2")
+<div class="main-wrapper account-wrapper" style="margin-top:5rem">
+    <div class="account-page">
+        <div class="account-center">
+            <div class="account-box">
+                <form class="form-signin">
 
-<div class="page-wrapper">
-    <div class="content">
-        <div class="row">
-            <div class="col-sm-12">
-                <h4 class="page-title">Inbox</h4>
+                    @Html.Partial("FirstLayoutLogo")
+                    <div id="responseMessage"></div>
+                    <input type="hidden" value="" id="responseCode" />
+                    <div class="form-group">
+
+                        <label>Username or Email</label>
+                        <input type="text" autofocus="" class="form-control" id="Username" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control" id="Password" required>
+                    </div>
+                    <div class="form-group text-right">
+                        <a href="/Home/ForgetPassword">Forgot your password?</a>
+                    </div>
+                    <div class="form-group text-center">
+                        <button type="submit" class="btn btn-primary account-btn" id="LoginBtn">Login</button>
+                    </div>
+                </form>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                
-                    </div>
-                    <div class="email-content col-md-12">
-                        <div class="table-responsive">
-                            <table class="table table-inbox table-hover">
-                                
-                                <tbody>
-                                    
-                                    <tr class="unread clickable-row" data-href="mail-view.html">
-                                        <td>
-                                            <input type="checkbox" class="checkmail">
-                                        </td>
-                                        <td><span class="mail-important"><i class="fa fa-star-o"></i></span></td>
-                                        <td class="name">Envato Account</td>
-                                        <td class="subject">Important account security update from Envato</td>
-                                        <td></td>
-                                        <td class="mail-date">8:42</td>
-                                        <td><a href="#">Assign Issues</a></td>
-                                    </tr>
-                                    
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
+    </div>

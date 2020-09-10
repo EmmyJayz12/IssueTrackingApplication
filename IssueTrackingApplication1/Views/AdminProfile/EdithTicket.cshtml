@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "EdithTicket";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+@Html.Partial("AdminSideBar")
+<div class="page-wrapper">
+    <div class="content">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2" style="background-color:white; padding-top:30px;">
+                <h4 class="page-title">Assign Ticket</h4>
+            </div>
+           <!-- @if (ViewBag.Message != null)
+            {
+                <div class="alert alert-success">@ViewBag.Message</div>
+            }-->
+        </div>
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2" style="background-color:white; padding-bottom:30px;">
+                <form action="" method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <select class="form-control select" name="dev">
+                                    <option value="">Assign To</option>
+                                    <option value="Ebingonye Dominic">Ebingonye Dominic</option>
+                                    <option value="Ogiogio Emmanuel">Ogiogio Emmanuel</option>
+                                </select>
+                            </div>
+                        </div>                     
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <select class="form-control select" name="Status">
+                                    <option value="">Status</option>
+                                    <option value="Pending">Pending</option>
+                                    <option value="On-going">on-Going</option>
+                                    <option value="Resolved">Resolved</option>
+                                </select>
+                            </div>
+                        </div> 
+                        <div class="m-t-20 text-center col-sm-12">
+                            <button type="submit" class="btn btn-primary submit-btn">Create</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

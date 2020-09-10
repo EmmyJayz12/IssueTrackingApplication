@@ -14,24 +14,6 @@ namespace IssueTrackingApplication1.Controllers
             return View();
         }
 
-        [HttpPost]
-        public ActionResult Index(string username, string password)
-        {
-            if (ModelState.IsValid)
-            {
-                using (IssueDbContext db = new IssueDbContext()) 
-                {
-                    var result = db.RegisterUsers.SingleOrDefault(u => u.Username == username && u.Password == password);
-                    if(result == null)
-                    {
-                        ViewBag.Message = "Invalid username or Password";
-                        return View();
-                    }
-                }
-            }
-            return RedirectToAction("Index", "Users");
-        }
-
         public ActionResult RegisterNow()
         {
            return View();

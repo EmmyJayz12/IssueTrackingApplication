@@ -1,6 +1,7 @@
 ﻿@{
     Layout = null;
 }
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,19 +20,19 @@
     <![endif]-->
 
     <style>
-        body {
-            background-image: url("../Content/img/bg-image09.jpg");
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: 110% 110%;
+       body {
+           background-image: url("../Content/img/bg-image08.jpg");
+           background-repeat: no-repeat;
+           background-attachment: fixed;
+           background-size: 110% 110%;
         }
     </style>
 </head>
 
 <body>
     <div class="main-wrapper">
-
-
+        
+       
 
         @RenderBody()
 
@@ -42,12 +43,12 @@
     <script src="~/Content/js/bootstrap.min.js"></script>
     <script src="~/Content/js/jquery.slimscroll.js"></script>
     <script src="~/Content/js/Chart.bundle.js"></script>
-    <!--<script src="~/Content/js/chart.js"></script>-->
+    <script src="~/Content/js/chart.js"></script>
     <script src="~/Content/js/app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
     <script>
         $(function () {
-            $("#LoginBtn").click(function (e) {
+            $("#Login").click(function (e) {
                 e.preventDefault();
 
                 $(this).html(
@@ -65,7 +66,7 @@
                     "Password": password
                 }
 
-                var url = "https://run.mocky.io/v3/c23114bc-e8f9-469c-8a8e-211a8a48968a";
+                var url = "https://run.mocky.io/v3/c1e54f58-61d1-4669-9336-2c08019a10e8";
                 $.ajax({
                     type: "POST",
                     url: url,
@@ -88,7 +89,7 @@
                         mode: CryptoJS.mode.CBC,
                         padding: CryptoJS.pad.Pkcs7
                     });
-                        var url = "/DevUsers/Inbox?Id=" + encrypted;
+                        var url = "/Users/Inbox?Id=" + encrypted;
                         window.location.href = url;
                     },
                     error: function (e) {
@@ -98,7 +99,7 @@
                 });
             });
         })
-    </script>-->
+    </script>
 </body>
 
 </html>

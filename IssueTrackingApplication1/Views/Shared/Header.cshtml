@@ -1,6 +1,10 @@
-﻿<div class="header">
+﻿@using IssueTrackingApplication1.Models
+<div class="header" style="background-color:rgba(26,63,124); color: white">
+    @{ 
+        var Users = Session["users"] as UsersInfo;
+    }
     <div class="header-left">    
-            <img src="~/Content/img/trackingicon.jpg" width="35" height="35" alt=""> <span>ISSUE TRACKING</span>
+            <img src="~/Content/img/trackingicon.jpg" width="35" height="35" alt="" style="margin-top: 6px;"> <span>ISSUE TRACKING</span>
     </div>
     <ul class="nav user-menu float-right">
         <li class="nav-item dropdown has-arrow">
@@ -9,7 +13,13 @@
                     <img class="rounded-circle" src="~/Content/img/user.jpg" width="24" alt="Admin">
                     <span class="status online"></span>
                 </span>
-                <span>Admin</span>
+                @{
+                    if (Users != null)
+                    {
+                        <span>@Users.FirstName</span>
+                    }
+                }
+                
             </a>
         </li>
     </ul>
