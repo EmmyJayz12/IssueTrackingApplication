@@ -90,8 +90,8 @@ namespace IssueTrackingApplication1.Controllers
                         }
                         return View();
                     }
-                    ViewBag.Message = "Ticket was susccessfully created" + " " + issueInfo.TicketId;
-                    ModelState.Clear();
+                    ViewBag.Message = "TicketId:" + " " + issueInfo.TicketId;
+                    
                 }
             
            

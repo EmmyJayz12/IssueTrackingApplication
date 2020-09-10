@@ -210,14 +210,11 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdminInfo.cs" />
     <Compile Include="Models\AdminLoginInfo.cs" />
-    <Compile Include="Models\AdminRegistration.cs" />
     <Compile Include="Models\DevInfo.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\IssueDbContext.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\RegisterDev.cs" />
     <Compile Include="Models\SqlDefaultValueAttribute.cs" />
-    <Compile Include="Models\TeamHead.cs" />
     <Compile Include="Models\IssueInfo.cs" />
     <Compile Include="Models\UsersInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -241,7 +238,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\DataBase\IssueTrackersDb.bak" />
+    <Content Include="Content\DataBase\IssueTrackerDb.bak" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

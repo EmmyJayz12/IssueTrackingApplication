@@ -11,13 +11,13 @@
             <div class="col-lg-8 offset-lg-2" style="background-color:white; padding-top:30px;">
                 <h4 class="page-title">Assign Ticket</h4>
             </div>
-            @if(ViewBag.Message != null)
-            {
-                <div class="alert alert-success">@ViewBag.Message</div>
-            }
         </div>
         <div class="row">
             <div class="col-lg-8 offset-lg-2" style="background-color:white; padding-bottom:30px;">
+                @if (ViewBag.Message != null)
+                {
+                    <div class="alert alert-success">@ViewBag.Message</div>
+                }
                 <form action="" method="post" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col-sm-6 col-md-6 col-lg-6">
